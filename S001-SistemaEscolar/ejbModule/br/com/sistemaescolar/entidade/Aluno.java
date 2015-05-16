@@ -16,7 +16,7 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 /**
- * @author Daniel Correia
+ * @author Daniel Correia de Freitas
  *
  */
 
