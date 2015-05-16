@@ -8,7 +8,7 @@
 		<jta-data-source>java:/sistemaescolar_ds</jta-data-source>
 		<class>br.com.sistemaescolar.entidade.Aluno</class>
 		<properties>
-			<property name="hibernate.hbm2ddl.auto" value="update" />	
+			<property name="hibernate.hbm2ddl.auto" value="create" />	
 			<property name="hibernate.show_sql" value="true" />
 			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect" />
 		</properties>
