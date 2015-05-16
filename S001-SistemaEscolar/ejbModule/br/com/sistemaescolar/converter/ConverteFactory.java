@@ -2,7 +2,11 @@ package br.com.sistemaescolar.converter;
 
 import br.com.sistemaescolar.entidade.Aluno;
 import br.com.sistemaescolar.to.AlunoTO;
-
+/**
+ * 
+ * @author Daniel Correia
+ *
+ */
 public class ConverteFactory {
 
 	public static Aluno converteAlunoTO(AlunoTO alunoTO){
