@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="S001-SistemaEscolar">
+        <wb-resource deploy-path="/" source-path="/ejbModule" tag="defaultRootSource"/>
+        <property name="java-output-path" value="/S001-SistemaEscolar/build/classes"/>
+        <property name="ClientProject" value="S001-SistemaEscolarClient"/>
+        <property name="ClientJARURI" value="S001-SistemaEscolarClient.jar"/>
+    </wb-module>
+</project-modules>

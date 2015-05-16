@@ -1,0 +1,3 @@
+Manifest-Version: 1.0
+Class-Path: S001-SistemaEscolarClient.jar
+

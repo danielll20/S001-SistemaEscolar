@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="S001-SistemaEscolarEAR">
+        <wb-resource deploy-path="/" source-path="/EarContent" tag="defaultRootSource"/>
+        <dependent-module archiveName="S001-SistemaEscolar.jar" deploy-path="/" handle="module:/resource/S001-SistemaEscolar/S001-SistemaEscolar">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="S001-SistemaEscolarClient.jar" deploy-path="/" handle="module:/resource/S001-SistemaEscolarClient/S001-SistemaEscolarClient">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="S001-SistemaEscolarWeb.war" deploy-path="/" handle="module:/resource/S001-SistemaEscolarWeb/S001-SistemaEscolarWeb">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+    </wb-module>
+</project-modules>
