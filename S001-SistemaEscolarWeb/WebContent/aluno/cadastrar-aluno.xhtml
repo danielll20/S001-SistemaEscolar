@@ -1,15 +1,57 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:ui="http://java.sun.com/jsf/facelets"
-      xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:h="http://java.sun.com/jsf/html"> 
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
 
-<h:head></h:head> 
-<h:body> 
+<h:head>
+	<h:outputStylesheet library="css" name="cadastrar-aluno.css" />
+</h:head>
+<h:body>
 	<ui:decorate template="/templates/template.xhtml">
-        <ui:define name="centro">
-           Tela de Cadastro de Aluno!
-        </ui:define>
-    </ui:decorate>
-</h:body> 
+		<ui:define name="centro">
+			<div class="cadastro-aluno">Cadastro de Aluno</div>
+
+			<div class="panel-cad-aluno">
+				<h:panelGrid columns="3" cellpadding="2">
+					<p:outputLabel value="Matrícula:" />
+					<p:inputText id="matricula" size="10" />
+					<p:message for="matricula" />
+					
+					<p:outputLabel value="Nome:" />
+					<p:inputText id="nome" size="40"/>
+					<p:message for="nome" />
+
+					<p:outputLabel value="Endereço:" />
+					<p:inputText id="endereco" size="40" />
+					<p:message for="endereco" />
+
+					<p:outputLabel value="Número:" />
+					<p:inputText id="numero" size="10" />
+					<p:message for="numero" />
+					
+					<p:outputLabel value="Complemento:" />
+					<p:inputText id="complemento" size="35" />
+					<p:message for="complemento" />
+					
+					<p:outputLabel value="Bairro:" />
+					<p:inputText id="bairro" size="35" />
+					<p:message for="bairro" />
+
+					<p:outputLabel value="Telefone:" />
+					<p:inputMask mask="(99) 9999-9999" id="telefone" size="10"/>
+					<p:message for="telefone" />
+
+					<p:outputLabel value="Celular" />
+					<p:inputMask mask="(99) 9999-9999" id="celular" size="10"/>
+					<p:message for="celular" />									
+				</h:panelGrid>
+				<br></br>
+				<p:commandButton id="btnE" value="Enviar" />
+				<p:commandButton id="btnL" value="Limpar" />
+			</div>
+		</ui:define>
+	</ui:decorate>
+</h:body>
 </html>
