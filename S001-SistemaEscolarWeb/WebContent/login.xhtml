@@ -22,13 +22,13 @@
 
 					<p:panelGrid columns="2">
 						<p:outputLabel value="Login:" />
-						<p:inputText value="" />
+						<p:inputText value="#{loginMB.login}"  />
 
 						<p:outputLabel value="Senha:" />
-						<p:password value="" />
+						<p:password value="#{loginMB.senha}" />
 					</p:panelGrid>
-					<br></br>
-					<p:commandButton value="Entrar" />
+					<p:outputLabel value="Login: admin"/> || <p:outputLabel value="Senha: admin"/>					
+					<p:commandButton value="Entrar" type="submit" action="#{loginMB.logar}"/>
 					<p:commandButton value="Cancelar" type="reset"/>
 				</p:dialog>
 

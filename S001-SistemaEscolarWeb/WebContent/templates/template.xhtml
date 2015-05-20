@@ -1,72 +1,40 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
-	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:p="http://primefaces.org/ui">
 
-
-
 <h:head>
-	<title>Login</title>	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<h:outputStylesheet library="css" name="template.css" />
+	<title>Sistema Escolar Web</title>	
 </h:head>
-
 <h:body>
-	<h:outputStylesheet library="css" name="template.css"  />			
-		<div class="cabecalho">							
-			<ui:insert name="cabecalho">
-				<div class="titulo"><p:outputLabel value="Sistema Escolar"/></div>
-				<h:form>  
-    <p:growl id="messages"/>
- 
-    <p:menubar styleClass="menu" >
-        <p:submenu label="File" icon="ui-icon-document">
-            <p:submenu label="New" icon="ui-icon-contact">
-                <p:menuitem value="Project" url="#" />
-                <p:menuitem value="Other" url="#" />
-            </p:submenu>
-            <p:menuitem value="Open" url="#" />
-            <p:separator />
-            <p:menuitem value="Quit" url="#" />
-        </p:submenu>
- 
-        <p:submenu label="Edit" icon="ui-icon-pencil">
-            <p:menuitem value="Undo" url="#" icon="ui-icon-arrowreturnthick-1-w" />
-            <p:menuitem value="Redo" url="#" icon="ui-icon-arrowreturnthick-1-e" />
-        </p:submenu>
- 
-        <p:submenu label="Help" icon="ui-icon-help">
-            <p:menuitem value="Contents" url="#" />
-            <p:submenu label="Search" icon="ui-icon-search">
-                <p:submenu label="Text">
-                    <p:menuitem value="Workspace" url="#" />
-                </p:submenu>
-                <p:menuitem value="File" url="#" />
-            </p:submenu>
-        </p:submenu>
- 
-        <p:submenu label="Actions" icon="ui-icon-gear">
-            <p:submenu label="Ajax" icon="ui-icon-refresh">
-                <p:menuitem value="Save" actionListener="#{menuView.save}" icon="ui-icon-disk" update="messages"/>
-                <p:menuitem value="Update" actionListener="#{menuView.update}" icon="ui-icon-arrowrefresh-1-w" update="messages"/>
-            </p:submenu>
-            <p:submenu label="Non-Ajax" icon="ui-icon-newwin">
-                <p:menuitem value="Delete" actionListener="#{menuView.delete}" icon="ui-icon-close" update="messages" ajax="false"/>
-            </p:submenu>
-        </p:submenu>
- 
-        <p:menuitem value="Quit" url="http://www.primefaces.org" icon="ui-icon-close" />
- 
-        
-    </p:menubar>
-</h:form>
-			</ui:insert>				
-		</div>
-		
-		<div class="corpo">							
-			<ui:insert name="corpo"/>						
-		</div>
+	<div align="center">
+		<p:layout style="min-width:1020px;max-width:1020px;min-height:600px">
+			<p:layoutUnit position="north" size="100">
+				<p:outputLabel styleClass="titulo-cabecalho" value="Sistema Escolar Web"/>
+			</p:layoutUnit>
+
+			<p:layoutUnit position="west" size="220">
+				<ui:insert name="menu">
+					<h:form>
+						<p:menu style="width: 200px">
+							<p:submenu label="Menu">
+								<p:menuitem value="Login" icon="ui-icon-key" />
+								<p:menuitem value="Fazer meu cadastro" icon="ui-icon-contact" />
+							</p:submenu>
+						</p:menu>
+					</h:form>
+				</ui:insert>
+			</p:layoutUnit>
+			<p:layoutUnit position="center">
+				<ui:insert name="centro">
+                        O que estiver aqui será substituido!
+                    </ui:insert>
+			</p:layoutUnit>
+		</p:layout>
+	</div>
 </h:body>
 </html>

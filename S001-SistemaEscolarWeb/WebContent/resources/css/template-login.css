@@ -1,5 +1,5 @@
 body{	
-	margin: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;		
 }
 
 .ui-widget, .ui-widget .ui-widget {
@@ -9,13 +9,8 @@ body{
 .cabecalho{	
 	border: solid 1px #CCCCCC;		
 	border-bottom: 0px;
-	background: #c4c4c4 -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,0.8)), to(rgba(255,255,255,0)));
+	background: #EEEEEE; /*#c4c4c4 -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,0.8)), to(rgba(255,255,255,0)));*/
 	height: 100px;
-}
-
-.corpo{	
-	border: solid 1px #CCCCCC;	
-	min-height: 570px;	
 }
 
 .titulo{
