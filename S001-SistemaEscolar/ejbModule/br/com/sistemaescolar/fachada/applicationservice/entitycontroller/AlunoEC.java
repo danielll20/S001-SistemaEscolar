@@ -22,7 +22,7 @@ import br.com.sistemaescolar.to.AlunoTO;
 @Stateless
 public class AlunoEC implements AlunoECLocal {
 	
-	@PersistenceContext
+	@PersistenceContext(unitName="S001-SistemaEscolarWeb")
 	private EntityManager entityManager;
 
 	/* (non-Javadoc)

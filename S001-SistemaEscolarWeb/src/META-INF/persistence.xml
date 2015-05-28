@@ -7,6 +7,8 @@
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
 		<jta-data-source>java:/sistemaescolar_ds</jta-data-source>
 		<class>br.com.sistemaescolar.entidade.Aluno</class>
+		<class>br.com.sistemaescolar.entidade.Users</class>
+		<class>br.com.sistemaescolar.entidade.Endereco</class>
 		<properties>
 			<property name="hibernate.hbm2ddl.auto" value="update" />	
 			<property name="hibernate.show_sql" value="true" />

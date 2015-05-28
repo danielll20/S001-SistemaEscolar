@@ -1,6 +1,7 @@
 package br.com.sistemaescolar.converter;
 
 import br.com.sistemaescolar.entidade.Aluno;
+import br.com.sistemaescolar.entidade.Endereco;
 import br.com.sistemaescolar.to.AlunoTO;
 /**
  * 
@@ -13,7 +14,18 @@ public class ConverteFactory {
 		Aluno aluno = new Aluno();
 		aluno.setMatricula(alunoTO.getMatricula());
 		aluno.setNomeAluno(alunoTO.getNomeAluno());
-		aluno.setDataCadastro(alunoTO.getData());
+		aluno.setDataCadastro(alunoTO.getDataCadastro());
+		
+		Endereco endereco = new Endereco();
+		endereco.setLogradouro(alunoTO.getEnderecoTO().getLogradouro());
+		endereco.setNumero(alunoTO.getEnderecoTO().getNumero());
+		endereco.setComplemento(alunoTO.getEnderecoTO().getComplemento());
+		endereco.setBairro(alunoTO.getEnderecoTO().getBairro());
+		
+		aluno.setTelefone(alunoTO.getCelular());
+		aluno.setCelular(alunoTO.getCelular());
+				
+		aluno.setEndereco(endereco);
 		
 		return aluno;
 		

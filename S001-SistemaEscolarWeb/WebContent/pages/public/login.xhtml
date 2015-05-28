@@ -13,27 +13,27 @@
 
 <ui:composition template="/templates/template-login.xhtml">	
 	<ui:define name="corpo">
-		<h:body>
+		 <h:body>
 			<h:outputStylesheet library="css" name="login.css" />
-			<h:form>
+			<form method="post" action="j_security_check">
 				<p:dialog styleClass="login" header="Login" id="dialog" minWidth="400" width="400"
 					modal="false" closable="false" position="center" showEffect="slide"
 					draggable="true" resizable="false" visible="true">
 
 					<p:panelGrid columns="2">
 						<p:outputLabel value="Login:" />
-						<p:inputText value="#{loginMB.login}"  />
+						<p:inputText type="text" id="j_username" name="j_username"/>
 
 						<p:outputLabel value="Senha:" />
-						<p:password value="#{loginMB.senha}" />
+						<p:password id="j_password" name="j_password" />
 					</p:panelGrid>
-					<p:outputLabel value="Login: admin"/> || <p:outputLabel value="Senha: admin"/>					
-					<p:commandButton value="Entrar" type="submit" action="#{loginMB.logar}"/>
+					<br></br>				
+					<h:form><p:commandButton type="submit" name="submit" value="Entrar" ajax="false"/></h:form>
 					<p:commandButton value="Cancelar" type="reset"/>
 				</p:dialog>
 
-			</h:form>
-		</h:body>
+			</form>
+		</h:body>	
 	</ui:define>
 </ui:composition>
 

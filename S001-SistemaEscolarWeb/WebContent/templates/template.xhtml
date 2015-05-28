@@ -12,10 +12,12 @@
 </h:head>
 <h:body>
 	<div align="center">
-		<p:layout style="min-width:1020px;max-width:1020px;min-height:600px">
-			<p:layoutUnit position="north" size="100">
-				<!-- <p:outputLabel styleClass="titulo-cabecalho" value="Sistema Escolar Web"/> -->
+		<p:layout style="min-width:1020px;max-width:1020px;min-height:650px;">
+			<p:layoutUnit position="north" size="100">				
 				<div class="titulo-cabecalho">Sistema Escolar Web</div>
+				<h:form>
+					<h3>#{msgs.bemVindo}: #{userMB.user.get(0).name}</h3>
+				</h:form>
 			</p:layoutUnit>
 
 			<p:layoutUnit position="west" size="220">
@@ -25,6 +27,7 @@
 							<p:submenu label="Menu">
 								<p:menuitem value="Login" icon="ui-icon-key" />
 								<p:menuitem value="Fazer meu cadastro" icon="ui-icon-contact" />
+								<p:menuitem value="#{msgs.logout}" icon="ui-icon-close" action="#{userMB.logOut()}"/>
 							</p:submenu>
 						</p:menu>
 					</h:form>

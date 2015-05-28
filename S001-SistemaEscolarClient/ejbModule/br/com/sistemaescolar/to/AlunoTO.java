@@ -14,7 +14,13 @@ public class AlunoTO implements Serializable {
 	
 	private String nomeAluno;
 
-	private Date data;
+	private Date dataCadastro;
+	
+	private EnderecoTO enderecoTO;
+	
+	private String telefone;
+	
+	private String celular;
 
 	public Integer getMatricula() {
 		return matricula;
@@ -32,16 +38,39 @@ public class AlunoTO implements Serializable {
 		this.nomeAluno = nomeAluno;
 	}
 
-	public Date getData() {
-		return data;
+	public Date getDataCadastro() {
+		return dataCadastro;
 	}
 
-	public void setData(Date data) {
-		this.data = data;
+	public void setDataCadastro(Date dataCadastro) {
+		this.dataCadastro = dataCadastro;
 	}
 
-	
-	
-	
+	public EnderecoTO getEnderecoTO() {
+		if(enderecoTO == null){
+			enderecoTO = new EnderecoTO();
+		}
+		return enderecoTO;
+	}
+
+	public void setEnderecoTO(EnderecoTO enderecoTO) {
+		this.enderecoTO = enderecoTO;
+	}
+
+	public String getTelefone() {
+		return telefone;
+	}
+
+	public void setTelefone(String telefone) {
+		this.telefone = telefone;
+	}
+
+	public String getCelular() {
+		return celular;
+	}
+
+	public void setCelular(String celular) {
+		this.celular = celular;
+	}
 	
 }

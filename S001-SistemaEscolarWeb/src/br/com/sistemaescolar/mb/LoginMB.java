@@ -27,9 +27,9 @@ public class LoginMB {
 	
 	public String logar() {
 		if(login.equals("admin") && senha.equals("admin")){
-			return "aluno/cadastrar-aluno";
+			return "aluno/cadastrar-aluno.xhtml";
 		}else{		
-			return "login";
+			return "login.xhtml";
 		}
 	}
 }
