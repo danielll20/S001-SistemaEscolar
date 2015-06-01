@@ -5,7 +5,7 @@ body {
 }
 
 .titulo-cabecalho{
-	font-size: 30px;	
+	font-size: 20px;	
 }
 
 .div-layout-geral{
@@ -21,7 +21,7 @@ body {
 }
 
 .menu-bar{
-	margin-top: 18px;
+	/*margin-top: 18px;*/
 }
 
 /* Menu fica por cima dos componentes da página */
@@ -31,7 +31,7 @@ body {
 
 .ui-layout-north {  
     z-index:20 !important;  
-    overflow:visible !important;;  
+    overflow:visible !important;
 }  
 .ui-layout-north .ui-layout-unit-content {  
     overflow:visible !important;  
