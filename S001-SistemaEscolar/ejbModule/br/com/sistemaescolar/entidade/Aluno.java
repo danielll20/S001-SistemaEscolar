@@ -38,7 +38,7 @@ public class Aluno {
 	@Column(name="DT_CAD")
 	private Date dataCadastro;
 	
-	@OneToOne(cascade = CascadeType.PERSIST)
+	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "SQ_ID")
 	private Endereco endereco;
 	

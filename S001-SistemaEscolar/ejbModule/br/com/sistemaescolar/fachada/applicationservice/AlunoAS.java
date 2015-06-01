@@ -3,8 +3,6 @@
  */
 package br.com.sistemaescolar.fachada.applicationservice;
 
-//import javax.ejb.EJB;
-
 import java.util.List;
 
 import javax.ejb.EJB;
@@ -22,7 +20,7 @@ import br.com.sistemaescolar.to.AlunoTO;
 public class AlunoAS implements AlunoASLocal {
 	
 	@EJB
-	private AlunoECLocal alunoEC;
+	private AlunoECLocal alunoEC;	
 
 	/* (non-Javadoc)
 	 * @see br.com.sistemaescolar.applicationservice.AlunoASLocal#cadastrar(br.com.sistemaescolar.to.AlunoTO)
@@ -35,6 +33,6 @@ public class AlunoAS implements AlunoASLocal {
 	@Override
 	public List<AlunoTO> consultarTodosAluno() {
 		return alunoEC.consultarTodosAluno();	
-	}
+	}	
 
 }

@@ -3,6 +3,7 @@
  */
 package br.com.sistemaescolar.mb;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.ejb.EJB;
@@ -11,6 +12,7 @@ import javax.faces.bean.ManagedBean;
 import br.com.sistemaescolar.fachada.AlunoSFLocal;
 import br.com.sistemaescolar.to.AlunoTO;
 
+
 /**
  * @author Daniel Correia
  *
@@ -18,21 +20,21 @@ import br.com.sistemaescolar.to.AlunoTO;
 @ManagedBean
 public class AlunoMB {
 				
-	private AlunoTO alunoTO;
-	
+	private AlunoTO alunoTO;	
+		
 	@EJB
 	private AlunoSFLocal alunoSF;
 	
-	private List<AlunoTO> alunos;
+	private List<AlunoTO> listaAlunos = new ArrayList<AlunoTO>();
 	
 	public void cadastrar() {
 		alunoSF.cadastrar(alunoTO);
 	}	
 	
 	public List<AlunoTO> consultarTodosAlunos() {		
-		return this.alunos = alunoSF.consultarTodosAluno();			
-	}
-
+		return alunoSF.consultarTodosAluno();					
+	}	
+	
 	public AlunoTO getAlunoTO() {
 		if(alunoTO == null){
 			alunoTO = new AlunoTO();
@@ -44,12 +46,14 @@ public class AlunoMB {
 		this.alunoTO = alunoTO;
 	}
 
-	public List<AlunoTO> getAlunos() {
-		return alunos;
+	public List<AlunoTO> getListaAlunos() {
+		listaAlunos = consultarTodosAlunos();
+		
+		return listaAlunos;
 	}
 
-	public void setAlunos(List<AlunoTO> alunos) {
-		this.alunos = alunos;
+	public void setListaAlunos(List<AlunoTO> listaAlunos) {
+		this.listaAlunos = listaAlunos;
 	}
 	
 }

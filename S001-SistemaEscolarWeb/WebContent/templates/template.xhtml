@@ -8,31 +8,38 @@
 <h:head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<h:outputStylesheet library="css" name="template.css" />
-	<title>Sistema Escolar Web</title>	
+	<title>Sistema Escolar Web</title>
 </h:head>
 <h:body>
-	<div align="center">
-		<p:layout style="min-width:1020px;max-width:1020px;min-height:650px;">
-			<p:layoutUnit position="north" size="100">				
+	<div align="center" class="div-layout-geral">
+		<p:layout styleClass="layout-geral">
+			<p:layoutUnit position="north" size="100">
 				<div class="titulo-cabecalho">Sistema Escolar Web</div>
+
+				<!-- Menu -->
 				<h:form>
-					<h3>#{msgs.bemVindo}: #{userMB.user.get(0).name}</h3>
+					<p:menubar styleClass="menu-bar">						
+						<p:submenu label="Início" icon="ui-icon-document">
+							<p:submenu label="Cadastro" icon="ui-icon-contact">
+								<p:menuitem value="Alunos" url="#" icon="ui-icon-person" />
+								<p:menuitem value="Disciplinas" icon="ui-icon-note"/>
+								<p:menuitem value="Professores" icon="ui-icon-person"/>
+							</p:submenu>
+							
+							<p:submenu label="Consultas" icon="ui-icon-search">
+								<p:menuitem value="Alunos" url="#" icon="ui-icon-person"/>
+								<p:menuitem value="Disciplinas" url="#" icon="ui-icon-note"/>
+								<p:menuitem value="Professores" url="#" icon="ui-icon-person"/>
+							</p:submenu>													
+						</p:submenu>
+
+						<p:menuitem value="Sair" action="#{userMB.logOut()}" icon="ui-icon-close" />
+					</p:menubar>
 				</h:form>
+				<!-- Menu -->
+
 			</p:layoutUnit>
 
-			<p:layoutUnit position="west" size="220">
-				<ui:insert name="menu">
-					<h:form>
-						<p:menu style="width: 200px">
-							<p:submenu label="Menu">
-								<p:menuitem value="Login" icon="ui-icon-key" />
-								<p:menuitem value="Fazer meu cadastro" icon="ui-icon-contact" />
-								<p:menuitem value="#{msgs.logout}" icon="ui-icon-close" action="#{userMB.logOut()}"/>
-							</p:submenu>
-						</p:menu>
-					</h:form>
-				</ui:insert>
-			</p:layoutUnit>
 			<p:layoutUnit position="center">
 				<ui:insert name="centro">
                         O que estiver aqui será substituido!

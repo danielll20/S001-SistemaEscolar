@@ -35,15 +35,14 @@ public class AlunoEC implements AlunoECLocal {
 	}
 
 	@Override
-	public List<AlunoTO> consultarTodosAluno() {
-		List<AlunoTO> lista = null;
+	public List<AlunoTO> consultarTodosAluno() {		 
 		StringBuilder jpql = new StringBuilder();
-		jpql.append("select a from Aluno a ");		
+		jpql.append("select a from Aluno a ");	
 		
 		Query query = entityManager.createQuery(jpql.toString());
-		lista = query.getResultList();
+		List<AlunoTO> lista = query.getResultList();
 		
 		return lista;
 	}
-
+	
 }

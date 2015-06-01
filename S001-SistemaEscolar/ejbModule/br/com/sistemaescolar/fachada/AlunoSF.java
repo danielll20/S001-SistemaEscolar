@@ -24,8 +24,7 @@ public class AlunoSF implements AlunoSFLocal {
 	private EJBContext ejbContext;
 	
 	@EJB
-	private AlunoASLocal alunoAS;
-	
+	private AlunoASLocal alunoAS;			
 
 	/* (non-Javadoc)
 	 * @see br.com.sistemaescolar.fachada.AlunoSFLocal#cadastrar(br.com.sistemaescolar.to.AlunoTO)
@@ -38,6 +37,6 @@ public class AlunoSF implements AlunoSFLocal {
 	@Override
 	public List<AlunoTO> consultarTodosAluno() {		
 		return alunoAS.consultarTodosAluno();
-	}
+	}		
 
 }
