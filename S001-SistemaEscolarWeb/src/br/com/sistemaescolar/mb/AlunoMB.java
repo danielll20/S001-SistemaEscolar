@@ -9,8 +9,9 @@ import java.util.List;
 import javax.ejb.EJB;
 import javax.faces.bean.ManagedBean;
 
+import br.com.sistemaescolar.entidade.Aluno;
 import br.com.sistemaescolar.fachada.AlunoSFLocal;
-import br.com.sistemaescolar.to.AlunoTO;
+import br.com.sistemaescolar.util.FacesUtil;
 
 
 /**
@@ -20,39 +21,41 @@ import br.com.sistemaescolar.to.AlunoTO;
 @ManagedBean
 public class AlunoMB {
 				
-	private AlunoTO alunoTO;	
+	private Aluno aluno;	
 		
 	@EJB
 	private AlunoSFLocal alunoSF;
 	
-	private List<AlunoTO> listaAlunos = new ArrayList<AlunoTO>();
+	private List<Aluno> listaAlunos = new ArrayList<Aluno>();
 	
 	public void cadastrar() {
-		alunoSF.cadastrar(alunoTO);
+		alunoSF.cadastrar(aluno);
+		aluno = new Aluno();
+		FacesUtil.addMsgInfo("Aluno cadastrado com sucesso!");
 	}	
 	
-	public List<AlunoTO> consultarTodosAlunos() {		
+	public List<Aluno> consultarTodosAlunos() {		
 		return alunoSF.consultarTodosAluno();					
 	}	
 	
-	public AlunoTO getAlunoTO() {
-		if(alunoTO == null){
-			alunoTO = new AlunoTO();
+	public Aluno getAluno() {
+		if(aluno == null){
+			aluno = new Aluno();
 		}
-		return alunoTO;
+		return aluno;
 	}
 
-	public void setAlunoTO(AlunoTO alunoTO) {
-		this.alunoTO = alunoTO;
+	public void setAlunoTO(Aluno aluno) {
+		this.aluno = aluno;
 	}
 
-	public List<AlunoTO> getListaAlunos() {
+	public List<Aluno> getListaAlunos() {
 		listaAlunos = consultarTodosAlunos();
 		
 		return listaAlunos;
 	}
 
-	public void setListaAlunos(List<AlunoTO> listaAlunos) {
+	public void setListaAlunos(List<Aluno> listaAlunos) {
 		this.listaAlunos = listaAlunos;
 	}
 	

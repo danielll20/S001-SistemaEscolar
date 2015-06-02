@@ -15,56 +15,46 @@
 				<p:fieldset legend="#{msgs.cadastroAluno}"
 					style="margin-bottom:20px">
 					<h:form>
-						<h:panelGrid columns="3" cellpadding="2">
-							<!-- <p:outputLabel value="Matrícula:" />
-						<p:inputText id="matricula" size="10" value="#{alunoMB.alunoTO.matricula}"/>
-						<p:message for="matricula" /> -->
-
+						<p:messages id="msg" showDetail="true" autoUpdate="true" closable="true" />
+						<h:panelGrid columns="2" cellpadding="2">																		
 							<p:outputLabel value="Nome:" />
 							<p:inputText id="nome" size="40"
-								value="#{alunoMB.alunoTO.nomeAluno}" />
-							<p:message for="nome" />
+								value="#{alunoMB.aluno.nomeAluno}" required="true" />							
 
 							<p:outputLabel value="Endereço:" />
 							<p:inputText id="endereco" size="40"
-								value="#{alunoMB.alunoTO.enderecoTO.logradouro}" />
-							<p:message for="endereco" />
+								value="#{alunoMB.aluno.endereco.logradouro}" required="true"/>							
 
 							<p:outputLabel value="Número:" />
-							<p:inputText id="numero" size="10"
-								value="#{alunoMB.alunoTO.enderecoTO.numero}" />
-							<p:message for="numero" />
+							<p:inputMask mask="9999" id="numero" size="10"
+								value="#{alunoMB.aluno.endereco.numero}" required="true"/>							
 
 							<p:outputLabel value="Complemento:" />
 							<p:inputText id="complemento" size="35"
-								value="#{alunoMB.alunoTO.enderecoTO.complemento}" />
-							<p:message for="complemento" />
+								value="#{alunoMB.aluno.endereco.complemento}" required="true"/>							
 
 							<p:outputLabel value="Bairro:" />
 							<p:inputText id="bairro" size="35"
-								value="#{alunoMB.alunoTO.enderecoTO.bairro}" />
-							<p:message for="bairro" />
+								value="#{alunoMB.aluno.endereco.bairro}" required="true"/>							
 
 							<p:outputLabel value="Telefone:" />
 							<p:inputMask mask="(99) 9999-9999" id="telefone" size="10"
-								value="#{alunoMB.alunoTO.telefone}" />
-							<p:message for="telefone" />
+								value="#{alunoMB.aluno.telefone}" required="true"/>							
 
 							<p:outputLabel value="Celular" />
 							<p:inputMask mask="(99) 9999-9999" id="celular" size="10"
-								value="#{alunoMB.alunoTO.celular}" />
-							<p:message for="celular" />
+								value="#{alunoMB.aluno.celular}" required="true"/>							
 
 						</h:panelGrid>
 						<br></br>
 						<p:commandButton id="btnE" value="Enviar"
-							action="#{alunoMB.cadastrar()}" ajax="false" />
+							action="#{alunoMB.cadastrar()}"  update="tabela-alunos, @form"/>
 						<p:commandButton id="btnL" value="Limpar" />
 
 					</h:form>
 				</p:fieldset>
 
-				<p:dataTable var="alunos" value="#{alunoMB.listaAlunos}" paginator="true">
+				<p:dataTable id="tabela-alunos" var="alunos" value="#{alunoMB.listaAlunos}" paginator="true" rows="20">
 					<p:column headerText="Matrícula">
 						<h:outputText value="#{alunos.matricula}" />
 					</p:column>
@@ -74,14 +64,14 @@
 					</p:column>
 
 					<p:column headerText="Endereço">
-						<h:outputText value="#" />
+						<h:outputText value="#{alunos.endereco.logradouro}" />
 					</p:column>
 
 					<p:column headerText="Número">
-						<h:outputText value="#" />
+						<h:outputText value="#{alunos.endereco.numero}" />
 					</p:column>
 				</p:dataTable>
-
+			
 			</div>
 		</ui:define>
 	</ui:decorate>

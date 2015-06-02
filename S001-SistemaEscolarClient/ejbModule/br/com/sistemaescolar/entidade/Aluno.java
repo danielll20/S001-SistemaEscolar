@@ -73,6 +73,9 @@ public class Aluno {
 	}
 
 	public Endereco getEndereco() {
+		if(endereco == null) {
+			endereco = new Endereco();
+		}
 		return endereco;
 	}
 

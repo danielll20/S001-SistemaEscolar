@@ -2,18 +2,15 @@ package br.com.sistemaescolar.fachada;
 
 import java.util.List;
 
-import javax.ejb.Local;
-
-import br.com.sistemaescolar.to.AlunoTO;
+import br.com.sistemaescolar.entidade.Aluno;
 
 /**
  * @author Daniel Correia
  *
  */
-@Local
 public interface AlunoSFLocal {
 
-	public void cadastrar(AlunoTO alunoTO);
+	public void cadastrar(Aluno aluno);
 	
-	public List<AlunoTO> consultarTodosAluno();
+	public List<Aluno> consultarTodosAluno();
 }
