@@ -11,7 +11,7 @@ import javax.ejb.EJBContext;
 import javax.ejb.Stateless;
 
 import br.com.sistemaescolar.applicationservice.AlunoASLocal;
-import br.com.sistemaescolar.to.AlunoTO;
+import br.com.sistemaescolar.entidade.Aluno;
 
 /**
  * @author Daniel Correia
@@ -30,12 +30,12 @@ public class AlunoSF implements AlunoSFLocal {
 	 * @see br.com.sistemaescolar.fachada.AlunoSFLocal#cadastrar(br.com.sistemaescolar.to.AlunoTO)
 	 */
 	@Override
-	public void cadastrar(AlunoTO alunoTO) {		
-		alunoAS.cadastrar(alunoTO);
+	public void cadastrar(Aluno aluno) {		
+		alunoAS.cadastrar(aluno);
 	}
 
 	@Override
-	public List<AlunoTO> consultarTodosAluno() {		
+	public List<Aluno> consultarTodosAluno() {		
 		return alunoAS.consultarTodosAluno();
 	}		
 
