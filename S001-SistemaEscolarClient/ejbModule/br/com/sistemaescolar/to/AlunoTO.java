@@ -26,6 +26,8 @@ public class AlunoTO implements Serializable {
 	
 	private String teste3;
 	
+	private String teste4;
+	
 	public Integer getMatricula() {
 		return matricula;
 	}
