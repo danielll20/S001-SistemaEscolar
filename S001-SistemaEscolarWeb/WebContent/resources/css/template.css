@@ -1,23 +1,37 @@
 body {
 	background-color: #eeeeee;
-	font-size: 12px;
-	/*border: solid 1px black;*/		
+	font-size: 12px;			
+	/*border: solid 2px black;*/				
 }
 
 .titulo-cabecalho{
 	font-size: 20px;	
+	text-align: center;
 }
 
-.div-layout-geral{
-	/*border: solid 2px yellow;*/ 
-	/*height: 1700px;*/
-	height: 900px;	/* barra de rolagem */
+.msg-bem-vindo {
+	text-align: center;
 }
+
+/*.div-layout-geral{
+	border: solid 2px blue; 
+	margin: 0 0 0 0;		
+}*/
+
+.layoutUnitCentro {
+	/*border: solid 2px yellow !important;*/	
+}
+
+/*.ui-layout-center .ui-layout-unit-content {  
+    overflow: visible !important;  
+}*/  
 
 .layout-geral{
-	min-width:1100px; 
-	max-width:1100px; 
-	min-height:800px; /* barra de rolagem */
+	min-width:1200px; 
+	max-width:1200px; 
+	min-height:100%; /* barra de rolagem */	
+	margin: 0 auto; /* layout no centro da tela */
+  	width: 50%; /* layout no centro da tela */  	
 }
 
 .menu-bar{

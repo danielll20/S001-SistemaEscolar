@@ -28,7 +28,7 @@ public class AlunoMB {
 	
 	private List<Aluno> listaAlunos = new ArrayList<Aluno>();
 	
-	public void cadastrar() {
+	public void cadastrar() {			
 		alunoSF.cadastrar(aluno);
 		aluno = new Aluno();
 		FacesUtil.addMsgInfo("Aluno cadastrado com sucesso!");
@@ -43,7 +43,7 @@ public class AlunoMB {
 			aluno = new Aluno();
 		}
 		return aluno;
-	}
+	}	
 
 	public void setAlunoTO(Aluno aluno) {
 		this.aluno = aluno;

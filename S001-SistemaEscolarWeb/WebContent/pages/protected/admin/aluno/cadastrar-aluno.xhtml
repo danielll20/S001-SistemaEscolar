@@ -11,39 +11,39 @@
 <h:body>
 	<ui:decorate template="/templates/template.xhtml">
 		<ui:define name="centro">
-			<div class="panel-cad-aluno">
+			<!-- <div class="panel-cad-aluno"> -->
 				<p:fieldset legend="#{msgs.cadastroAluno}"
 					style="margin-bottom:20px">
 					<h:form>
-						<p:messages id="msg" showDetail="true" autoUpdate="true" closable="true" />
+						<p:messages id="msg" showDetail="false" autoUpdate="true" closable="true" />
 						<h:panelGrid columns="2" cellpadding="2">																		
 							<p:outputLabel value="Nome:" />
 							<p:inputText id="nome" size="40"
-								value="#{alunoMB.aluno.nomeAluno}" required="true" />							
+								value="#{alunoMB.aluno.nomeAluno}" required="true" requiredMessage="* Campo nome obrigatório."/>							
 
 							<p:outputLabel value="Endereço:" />
 							<p:inputText id="endereco" size="40"
-								value="#{alunoMB.aluno.endereco.logradouro}" required="true"/>							
+								value="#{alunoMB.aluno.endereco.logradouro}" required="true" requiredMessage="* Campo endereço obrigatório."/>							
 
 							<p:outputLabel value="Número:" />
 							<p:inputMask mask="9999" id="numero" size="10"
-								value="#{alunoMB.aluno.endereco.numero}" required="true"/>							
+								value="#{alunoMB.aluno.endereco.numero}" required="true" requiredMessage="* Campo número obrigatório."/>							
 
 							<p:outputLabel value="Complemento:" />
 							<p:inputText id="complemento" size="35"
-								value="#{alunoMB.aluno.endereco.complemento}" required="true"/>							
+								value="#{alunoMB.aluno.endereco.complemento}" required="true" requiredMessage="* Campo complemento obrigatório."/>							
 
 							<p:outputLabel value="Bairro:" />
 							<p:inputText id="bairro" size="35"
-								value="#{alunoMB.aluno.endereco.bairro}" required="true"/>							
+								value="#{alunoMB.aluno.endereco.bairro}" required="true" requiredMessage="* Campo bairro obrigatório."/>							
 
 							<p:outputLabel value="Telefone:" />
 							<p:inputMask mask="(99) 9999-9999" id="telefone" size="10"
-								value="#{alunoMB.aluno.telefone}" required="true"/>							
+								value="#{alunoMB.aluno.telefone}" required="true" requiredMessage="* Campo telefone obrigatório."/>							
 
 							<p:outputLabel value="Celular" />
 							<p:inputMask mask="(99) 9999-9999" id="celular" size="10"
-								value="#{alunoMB.aluno.celular}" required="true"/>							
+								value="#{alunoMB.aluno.celular}" required="true" requiredMessage="* Campo celular obrigatório."/>							
 
 						</h:panelGrid>
 						<br></br>
@@ -71,8 +71,9 @@
 						<h:outputText value="#{alunos.endereco.numero}" />
 					</p:column>
 				</p:dataTable>
-			
-			</div>
+										
+			<!-- </div> -->
+																															
 		</ui:define>
 	</ui:decorate>
 </h:body>

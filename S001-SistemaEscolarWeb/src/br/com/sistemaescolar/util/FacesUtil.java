@@ -13,7 +13,7 @@ public class FacesUtil {
 	}
 	
 	public static void addMsgErro(String mensagem) {
-		FacesMessage facesMessage = new FacesMessage(FacesMessage.SEVERITY_ERROR, mensagem, mensagem);
+		FacesMessage facesMessage = new FacesMessage(FacesMessage.SEVERITY_ERROR, null, mensagem);
 		
 		FacesContext facesContext = FacesContext.getCurrentInstance();
 		facesContext.addMessage(null, facesMessage);

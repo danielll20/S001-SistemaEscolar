@@ -1,0 +1,193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<h:outputStylesheet library="css" name="cadastrar-aluno.css" />
+</h:head>
+<h:body>
+	<ui:decorate template="/templates/template.xhtml">
+		<ui:define name="centro">
+			<!-- <div class="panel-cad-aluno"> -->
+				<p:fieldset legend="#{msgs.cadastroAluno}"
+					style="margin-bottom:20px">
+					<h:form>
+						<p:messages id="msg" showDetail="false" autoUpdate="true" closable="true" />
+						<h:panelGrid columns="2" cellpadding="2">																		
+							<p:outputLabel value="Nome:" />
+							<p:inputText id="nome" size="40"
+								value="#{alunoMB.aluno.nomeAluno}" required="true" requiredMessage="* Campo nome obrigatório."/>							
+
+							<p:outputLabel value="Endereço:" />
+							<p:inputText id="endereco" size="40"
+								value="#{alunoMB.aluno.endereco.logradouro}" required="true" requiredMessage="* Campo endereço obrigatório."/>							
+
+							<p:outputLabel value="Número:" />
+							<p:inputMask mask="9999" id="numero" size="10"
+								value="#{alunoMB.aluno.endereco.numero}" required="true" requiredMessage="* Campo número obrigatório."/>							
+
+							<p:outputLabel value="Complemento:" />
+							<p:inputText id="complemento" size="35"
+								value="#{alunoMB.aluno.endereco.complemento}" required="true" requiredMessage="* Campo complemento obrigatório."/>							
+
+							<p:outputLabel value="Bairro:" />
+							<p:inputText id="bairro" size="35"
+								value="#{alunoMB.aluno.endereco.bairro}" required="true" requiredMessage="* Campo bairro obrigatório."/>							
+
+							<p:outputLabel value="Telefone:" />
+							<p:inputMask mask="(99) 9999-9999" id="telefone" size="10"
+								value="#{alunoMB.aluno.telefone}" required="true" requiredMessage="* Campo telefone obrigatório."/>							
+
+							<p:outputLabel value="Celular" />
+							<p:inputMask mask="(99) 9999-9999" id="celular" size="10"
+								value="#{alunoMB.aluno.celular}" required="true" requiredMessage="* Campo celular obrigatório."/>							
+
+						</h:panelGrid>
+						<br></br>
+						<p:commandButton id="btnE" value="Enviar"
+							action="#{alunoMB.cadastrar()}"  update="tabela-alunos, @form"/>
+						<p:commandButton id="btnL" value="Limpar" />
+
+					</h:form>
+				</p:fieldset>
+
+				<p:dataTable id="tabela-alunos" var="alunos" value="#{alunoMB.listaAlunos}" paginator="true" rows="20">
+					<p:column headerText="Matrícula">
+						<h:outputText value="#{alunos.matricula}" />
+					</p:column>
+
+					<p:column headerText="Nome">
+						<h:outputText value="#{alunos.nomeAluno}" />
+					</p:column>
+
+					<p:column headerText="Endereço">
+						<h:outputText value="#{alunos.endereco.logradouro}" />
+					</p:column>
+
+					<p:column headerText="Número">
+						<h:outputText value="#{alunos.endereco.numero}" />
+					</p:column>
+				</p:dataTable>
+				
+				<p:dataTable id="tabela-alunos1" var="alunos" value="#{alunoMB.listaAlunos}" paginator="true" rows="20">
+					<p:column headerText="Matrícula">
+						<h:outputText value="#{alunos.matricula}" />
+					</p:column>
+
+					<p:column headerText="Nome">
+						<h:outputText value="#{alunos.nomeAluno}" />
+					</p:column>
+
+					<p:column headerText="Endereço">
+						<h:outputText value="#{alunos.endereco.logradouro}" />
+					</p:column>
+
+					<p:column headerText="Número">
+						<h:outputText value="#{alunos.endereco.numero}" />
+					</p:column>
+				</p:dataTable>			
+				
+				<p:dataTable id="tabela-alunos2" var="alunos" value="#{alunoMB.listaAlunos}" paginator="true" rows="20">
+					<p:column headerText="Matrícula">
+						<h:outputText value="#{alunos.matricula}" />
+					</p:column>
+
+					<p:column headerText="Nome">
+						<h:outputText value="#{alunos.nomeAluno}" />
+					</p:column>
+
+					<p:column headerText="Endereço">
+						<h:outputText value="#{alunos.endereco.logradouro}" />
+					</p:column>
+
+					<p:column headerText="Número">
+						<h:outputText value="#{alunos.endereco.numero}" />
+					</p:column>
+				</p:dataTable>	
+				
+				<p:dataTable id="tabela-alunos3" var="alunos" value="#{alunoMB.listaAlunos}" paginator="true" rows="20">
+					<p:column headerText="Matrícula">
+						<h:outputText value="#{alunos.matricula}" />
+					</p:column>
+
+					<p:column headerText="Nome">
+						<h:outputText value="#{alunos.nomeAluno}" />
+					</p:column>
+
+					<p:column headerText="Endereço">
+						<h:outputText value="#{alunos.endereco.logradouro}" />
+					</p:column>
+
+					<p:column headerText="Número">
+						<h:outputText value="#{alunos.endereco.numero}" />
+					</p:column>
+				</p:dataTable>		
+				
+				<p:dataTable id="tabela-alunos4" var="alunos" value="#{alunoMB.listaAlunos}" paginator="true" rows="20">
+					<p:column headerText="Matrícula">
+						<h:outputText value="#{alunos.matricula}" />
+					</p:column>
+
+					<p:column headerText="Nome">
+						<h:outputText value="#{alunos.nomeAluno}" />
+					</p:column>
+
+					<p:column headerText="Endereço">
+						<h:outputText value="#{alunos.endereco.logradouro}" />
+					</p:column>
+
+					<p:column headerText="Número">
+						<h:outputText value="#{alunos.endereco.numero}" />
+					</p:column>
+				</p:dataTable>	
+				
+				<p:dataTable id="tabela-alunos5" var="alunos" value="#{alunoMB.listaAlunos}" paginator="true" rows="20">
+					<p:column headerText="Matrícula">
+						<h:outputText value="#{alunos.matricula}" />
+					</p:column>
+
+					<p:column headerText="Nome">
+						<h:outputText value="#{alunos.nomeAluno}" />
+					</p:column>
+
+					<p:column headerText="Endereço">
+						<h:outputText value="#{alunos.endereco.logradouro}" />
+					</p:column>
+
+					<p:column headerText="Número">
+						<h:outputText value="#{alunos.endereco.numero}" />
+					</p:column>
+				</p:dataTable>		
+				
+				<p:dataTable id="tabela-alunos6" var="alunos" value="#{alunoMB.listaAlunos}" paginator="true" rows="20">
+					<p:column headerText="Matrícula">
+						<h:outputText value="#{alunos.matricula}" />
+					</p:column>
+
+					<p:column headerText="Nome">
+						<h:outputText value="#{alunos.nomeAluno}" />
+					</p:column>
+
+					<p:column headerText="Endereço">
+						<h:outputText value="#{alunos.endereco.logradouro}" />
+					</p:column>
+
+					<p:column headerText="Número">
+						<h:outputText value="#{alunos.endereco.numero}" />
+					</p:column>
+				</p:dataTable>		
+				
+				
+				
+				
+				
+									
+			<!-- </div> -->
+																									
+		</ui:define>
+	</ui:decorate>
+</h:body>
+</html>

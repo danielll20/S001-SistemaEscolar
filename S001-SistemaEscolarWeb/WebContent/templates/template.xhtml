@@ -11,11 +11,13 @@
 	<title>Sistema Escolar Web</title>
 </h:head>
 <h:body>
-	<div align="center" class="div-layout-geral">
+	<!-- <div align="center" class="div-layout-geral"> -->
 		<p:layout styleClass="layout-geral">
-			<p:layoutUnit position="north" size="100">
+			<p:layoutUnit position="north" size="110">
 				<div class="titulo-cabecalho">Sistema Escolar Web</div>
-
+				<h:form styleClass="msg-bem-vindo">
+					<h3>#{msgs.bemVindo}: #{userMB.user.get(0).name}</h3>
+				</h:form>
 				<!-- Menu -->
 				<h:form>
 					<p:menubar styleClass="menu-bar">						
@@ -40,12 +42,15 @@
 
 			</p:layoutUnit>
 
-			<p:layoutUnit position="center">
+			<p:layoutUnit position="center" styleClass="layoutUnitCentro">
 				<ui:insert name="centro">
                         O que estiver aqui será substituido!
                     </ui:insert>
 			</p:layoutUnit>
+			<br></br>
+			<br></br>
+			<br></br>
 		</p:layout>
-	</div>
+	<!-- </div> -->	
 </h:body>
 </html>
