@@ -26,7 +26,7 @@ public class AlunoMB {
 	@EJB
 	private AlunoSFLocal alunoSF;
 	
-	private List<Aluno> listaAlunos = new ArrayList<Aluno>();
+	private List<Aluno> listaAlunos;
 	
 	public void cadastrar() {			
 		alunoSF.cadastrar(aluno);
@@ -50,8 +50,10 @@ public class AlunoMB {
 	}
 
 	public List<Aluno> getListaAlunos() {
-		listaAlunos = consultarTodosAlunos();
-		
+		if(this.listaAlunos == null) {
+			listaAlunos = consultarTodosAlunos();
+		}
+				
 		return listaAlunos;
 	}
 

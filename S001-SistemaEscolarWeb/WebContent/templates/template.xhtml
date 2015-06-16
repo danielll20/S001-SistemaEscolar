@@ -19,13 +19,14 @@
 					<h3>#{msgs.bemVindo}: #{userMB.user.get(0).name}</h3>
 				</h:form>
 				<!-- Menu -->
-				<h:form>
+				<h:form>					
 					<p:menubar styleClass="menu-bar">						
 						<p:submenu label="Início" icon="ui-icon-document">
 							<p:submenu label="Cadastro" icon="ui-icon-contact">
 								<p:menuitem value="Alunos" url="#" icon="ui-icon-person" />
 								<p:menuitem value="Disciplinas" icon="ui-icon-note"/>
 								<p:menuitem value="Professores" icon="ui-icon-person"/>
+								<p:menuitem value="testar-aluno" action="#{indexController.setCurrentPage('testar-aluno.xhtml')}" icon="ui-icon-person"/>
 							</p:submenu>
 							
 							<p:submenu label="Consultas" icon="ui-icon-search">
@@ -36,7 +37,7 @@
 						</p:submenu>
 
 						<p:menuitem value="Sair" action="#{userMB.logOut()}" icon="ui-icon-close" />
-					</p:menubar>
+					</p:menubar>				
 				</h:form>
 				<!-- Menu -->
 
