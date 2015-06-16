@@ -27,6 +27,12 @@ public class Endereco {
 	
 	@Column(name="NM_BAIR")
 	private String bairro;
+	
+	@Column(name="NM_CIDADE")
+	private String cidade;
+	
+	@Column(name="NM_ESTADO")
+	private String estado;
 
 	public Integer getId() {
 		return id;
